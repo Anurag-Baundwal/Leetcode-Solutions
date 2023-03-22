@@ -11,3 +11,7 @@ class Solution:
             digits[0] = 0
             return [1] + digits
         return digits
+    
+# class Solution:
+#     def plusOne(self, digits: List[int]) -> List[int]:
+#         return [int(d) for d in str(int(''.join(str(x) for x in digits)) + 1)]
