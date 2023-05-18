@@ -14,8 +14,8 @@ class Solution:
     def treeSum(self, root):
         if root is None:
             return 0
-        left_sum = self.treeSum(root.left)
-        right_sum = self.treeSum(root.right)
-        tilt = abs(left_sum - right_sum)
-        self.total_tilt += tilt
-        return root.val + left_sum + right_sum
+        left_sum = self.treeSum(root.left)      # calc leftsum  
+        right_sum = self.treeSum(root.right)    # calc rightsum
+        tilt = abs(left_sum - right_sum)        # calc tilt
+        self.total_tilt += tilt                 # update total_tilt
+        return root.val + left_sum + right_sum  
